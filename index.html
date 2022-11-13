@@ -64,13 +64,14 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
-              <span class="fa fa-sign-in"></span> Login</a
-            >
+            <a id="loginbt"> <span class="fa fa-sign-in"></span> Login</a>
           </span>
         </div>
       </div>
     </nav>
+
+    <!-- MODALS -->
+
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
         <!-- Modal content-->
@@ -280,6 +281,8 @@
       </div>
     </div>
 
+    <!-- END MODALS -->
+
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
@@ -296,10 +299,9 @@
           </div>
           <div class="col-md-3 align-self-center">
             <a
+              id="Reservebt"
               role="button"
               class="btn btn-block nav-link btn-warning"
-              data-toggle="modal"
-              data-target="#reserveformt"
             >
               Reserve table
             </a>
@@ -560,6 +562,12 @@
             $("#carouselButton").children("span").removeClass("fa-play");
             $("#carouselButton").children("span").addClass("fa-pause");
           }
+        });
+        $("#Reservebt").click(function () {
+          $("#reserveformt").modal("show");
+        });
+        $("#loginbt").click(function () {
+          $("#loginModal").modal("show");
         });
       });
     </script>
